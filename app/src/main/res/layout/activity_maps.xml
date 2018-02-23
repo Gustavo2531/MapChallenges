@@ -1,0 +1,57 @@
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gustavomendez.mapschallenge.MapsActivity" />
+
+    <Button
+        android:id="@+id/zoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="15dp"
+        android:onClick="execute"
+        android:text="Zoom In" />
+
+    <Button
+        android:id="@+id/zoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/challengeB"
+        android:layout_toEndOf="@+id/zoomIn"
+        android:layout_toRightOf="@+id/zoomIn"
+        android:onClick="execute"
+        android:text="Zoom Out" />
+
+    <Button
+        android:id="@+id/styleB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/challengeB"
+        android:layout_alignStart="@+id/challengeB"
+        android:layout_below="@+id/challengeB"
+        android:onClick="execute"
+        android:text="Style" />
+
+    <Button
+        android:id="@+id/challengeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/zoomIn"
+        android:layout_alignStart="@+id/zoomIn"
+        android:layout_below="@+id/zoomIn"
+        android:onClick="execute"
+        android:text="Challenge" />
+</RelativeLayout>
